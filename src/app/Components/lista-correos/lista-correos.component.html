@@ -1,0 +1,30 @@
+<table style = "width: 100%; border: 1px solid black;">
+    <tr>
+        <th>
+            Leido
+        </th>
+        <th>
+            Emisor
+        </th>
+        <th>
+            Titulo
+        </th>
+    </tr>
+    <tr *ngFor="let correo of correos">
+        <td>
+            <div *ngIf ="correo.leido">
+                Leido
+            </div>
+            
+            <div *ngIf ="!correo.leido">
+                No leido
+            </div>
+        </td>
+        <td>
+            {{correo.emisor}}
+        </td>
+        <td>
+            {{correo.titulo}}
+        </td>
+    </tr>
+</table>
