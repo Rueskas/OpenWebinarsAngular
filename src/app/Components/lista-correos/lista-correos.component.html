@@ -29,8 +29,8 @@
             <button (click)="clickResponder(correo)">Responder</button>
         </td>
     </tr>
-    <tr>
-        <app-nuevo-correo *ngIf="correo.responder" [correo]="correoAResponder"></app-nuevo-correo>
+    <tr *ngIf="correo.responder">
+        <app-nuevo-correo  [correo]="correo" (accionRealizada)="accionRespuestaRapida($event)"></app-nuevo-correo>
     </tr>
 </ng-container>
 </table>
